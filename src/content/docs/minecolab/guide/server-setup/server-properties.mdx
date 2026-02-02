@@ -1,0 +1,53 @@
+---
+title: Server Properties Configuration
+description: How to adjust your Minecraft server properties.
+---
+
+## Server Properties Configuration
+
+<img src="/assets/images/celdas/propiedades.png" alt="propiedades" />
+
+MineColab allows you to configure your Minecraft server easily and safely, ensuring important changes do not affect your existing worlds.  
+
+## Modify Server Properties
+
+You can change several server parameters without manually editing files:
+
+- **Maximum number of players** → Limits how many players can join the server.  
+- **Game mode** → Choose between Survival, Creative, Adventure, or Spectator.  
+- **Difficulty** → Peaceful, Easy, Normal, or Hard.  
+- **Advanced options** → PvP, command blocks, flight, spawn animals, monsters, villagers, Nether, and force gamemode.  
+- **Allow non-premium players** → Enable or disable “cracked” mode.  
+
+To change these properties:
+
+1. Make sure you have run your server at least once to generate the `server.properties` file.  
+2. Open the properties configuration cell.  
+3. Adjust the parameters you want.  
+4. Save the changes and restart your server to apply them.
+
+## Change World Seed (Level Seed)
+
+If you want to generate a new world with a specific seed:
+
+1. Enter the seed in the **`LevelSeed`** option in the configuration cell.  
+2. The script will automatically **backup existing worlds** to prevent data loss.  
+3. Backed-up worlds are stored in a folder named with the date and seed used.  
+4. After the backup, old worlds are deleted and a new world is generated with the specified seed.  
+
+> This ensures you can experiment with new seeds without losing your current worlds.
+
+### Automatic Backup
+
+Each time the seed is changed:
+
+- All existing worlds (`world`, `world_nether`, `world_the_end`) are detected.  
+- Backups are created with the date and server name for easy recovery.  
+- Original worlds are only deleted after the backup is completed.  
+
+## Final Result
+
+With this script you can:
+
+- Safely adjust all key properties of your server.  
+- Generate new worlds with any seed without losing existing worlds.

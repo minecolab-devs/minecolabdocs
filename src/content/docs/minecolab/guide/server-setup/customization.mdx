@@ -1,0 +1,37 @@
+---
+title: Server Customization
+description: How to change your server's MOTD and icon in MineColab.
+---
+
+## Server Custom
+
+<img src="/assets/images/celdas/server_custom.png" alt="server_custom" />
+
+MineColab allows you to personalize your Minecraft server with two main elements:
+
+- **MOTD (Message of the Day)** → The message that appears in the Minecraft server list.  
+- **Server icon** → The image displayed next to the server name in the server list.
+
+## Changing the MOTD
+
+1. Make sure you have run your server at least once (to generate the `server.properties` file).  
+2. Open the customization cell (`Server_custom`) and select the **`server_motd`** option.  
+3. Enter the text you want to display.  
+   - You can use a generator like [MC Tools MOTD Creator](https://mctools.org/motd-creator) to add colors and formatting.  
+4. Save the changes and restart your server to see the new MOTD in the Minecraft server list.
+
+## Changing the Server Icon
+
+1. Make sure you have a **square PNG image**.  
+2. The image size should be **64x64 pixels** (MineColab will resize it automatically if needed).  
+3. In the customization cell, select the **`server_icon`** option.  
+4. There are two ways to add your icon:  
+   - **Upload from your computer** → Use the upload button in the cell.  
+   - **From a direct link** → Enter the URL of the image (you can upload it to services like [ImgBB](https://imgbb.com) or [Postimages](https://postimages.org) first).  
+5. Once uploaded, the image will be resized to 64x64 px and saved as `server-icon.png` in your server folder.  
+6. Restart your server to see the new icon in the Minecraft server list.
+
+## Final Result
+
+- The **MOTD** will appear below your server name.  
+- The **icon** will appear to the left of the server name in the server list.

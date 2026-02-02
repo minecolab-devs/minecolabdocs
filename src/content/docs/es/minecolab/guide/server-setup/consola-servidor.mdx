@@ -1,0 +1,77 @@
+---
+title: Consola del Servidor
+description: Uso general de la consola en MineColab, incluyendo arranque, comandos y logs.
+---
+## ▶ or 🛑Console del Servidor
+
+<img src="/assets/images/celdas/console.png" alt="Console" />
+
+La consola es la herramienta principal para interactuar con tu servidor en MineColab. Desde aquí puedes arrancar el servidor, ver registros en tiempo real y ejecutar comandos de administración. En **Tunnels** ya se explicó la mayoría de configuraciones para cada túnel, entre ellas cómo arrancar el servidor desde la consola.
+
+### Opciones previas al arranque
+
+Antes de ejecutar la celda **Console > Run your server**, se muestran estas configuraciones:
+
+**Custom arguments (custom\_args)**
+
+* Si la casilla está marcada: podrás escribir tus propios parámetros de Java (por ejemplo: `-Xms2G -Xmx4G -XX:+UseG1GC`).
+* Si la casilla está desmarcada: MineColab aplicará automáticamente los parámetros recomendados por defecto.
+
+**Auto update (solo Bedrock)**
+
+
+* Si la casilla está marcada: el servidor Bedrock se actualizará automáticamente cada vez que haya una nueva versión disponible.
+
+  * El proceso puede tardar entre 10 y 15 minutos.
+  * Durante ese tiempo, el servidor no estará disponible.
+* Si la casilla está desmarcada: el servidor no se actualizará por sí mismo.
+
+  * Tú decidirás cuándo y cómo aplicar manualmente la actualización.
+  * Esta opción no tiene efecto en servidores Java, solo funciona en Bedrock.
+
+### Arranque del servidor
+
+Una vez configuradas las opciones, ejecuta la celda **Console > Run your server**.
+MineColab iniciará el servidor y mostrará los logs de arranque, que incluyen:
+
+* Instalación de dependencias necesarias.
+* Generación de archivos iniciales (EULA, carpetas del mundo, configuración).
+* Carga de plugins o mods (si están instalados).
+* Confirmación de que el servidor está en línea con el mensaje:
+
+```log
+[00:00:00 INFO]: Done (xx.xxxs)! For help, type "help"
+```
+
+### Uso de comandos en la consola
+
+Puedes escribir comandos directamente en la celda de la consola mientras el servidor está en ejecución. Ejemplos:
+
+* `/stop` → Detiene el servidor de forma segura.
+* `/op <jugador>` → Concede permisos de operador a un jugador.
+* `/whitelist add <jugador>` → Añade un jugador a la lista blanca.
+* `/say <mensaje>` → Envía un mensaje global a todos los jugadores conectados.
+
+Si quieres saber más sobre los comandos disponibles en Minecraft, puedes visitar la sección correspondiente.
+
+## Lectura de logs
+
+En la consola también se muestran los logs en tiempo real, que sirven para:
+
+* Ver conexiones y desconexiones de jugadores.
+* Identificar errores o advertencias del servidor.
+* Confirmar que plugins o mods se han cargado correctamente.
+
+## Personalización de parámetros Java
+
+Si activaste **Custom arguments**, puedes ajustar el rendimiento del servidor con parámetros como:
+
+* `-Xms` → Memoria mínima asignada (ej. `-Xms2G`).
+* `-Xmx` → Memoria máxima asignada (ej. `-Xmx4G`).
+* `-XX:+UseG1GC` → Activar el recolector de basura G1GC para mejor rendimiento en servidores con muchos jugadores.
+
+Si quieres profundizar más sobre los parámetros de Java, puedes visitar las siguientes páginas:
+* <a href="https://docs.papermc.io/paper/aikars-flags/" target="_blank">**Aikar's flags - Paper**</a>.
+* <a href="https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/" target="_blank">**Aikar's flags**</a>.
+* <a href="https://flags.sh/" target="_blank">**flags.sh**</a>.
+* <a href="https://github.com/MeowIce/meowice-flags?tab=readme-ov-file">**MeowIce's Flags**</a>.

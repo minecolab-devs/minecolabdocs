@@ -1,0 +1,108 @@
+---
+title: Localtonet Tunnel
+description: How to use Localtonet with MineColab.
+---
+
+## Configure LocaltoNet with MineColab
+
+When selecting LocaltoNet as your tunnel provider, follow these steps to configure it correctly:
+
+### Enter your authentication token
+
+When you select **LocaltoNet** in MineColab, you will be asked for an **authentication token**. You will see a message like this:
+
+```log
+[ LOG ] Chosen Tunnel service: LocaltoNet
+[ LOG ] Tunnel Settings:
+[ LOG ] Get your authtoken from https://localtonet.com/usertoken
+[ WARN ] Remember to paste the whole authtoken at once!
+Authtoken:
+````
+
+To complete this step, you need to obtain your token from the LocaltoNet website.
+
+### How to get your token
+
+1. Go to <a href="https://localtonet.com" target="_blank">LocaltoNet</a> and create an account (if you don’t have one yet).  
+2. Access your **Dashboard**.
+
+   * Once logged in, in the main menu you will see the option **My Tokens**. Click there to manage your tokens.  
+   * In the section that appears, you will find a field called **Token Name**. Here you should enter a descriptive name to identify your token (for example: *MineColab* or *Server1*).  
+   * After entering the name, click the **Create** button.  
+   * The system will process the request and, after a few seconds, your new token will appear in the table below, under the **TOKEN** column.  
+   * Copy the full token from that column, as you will need it in MineColab.
+
+Once you have the token, paste it directly on the next line inside MineColab:
+
+```log
+Authtoken:
+```
+
+If everything is correct, you will see something like this:
+
+```log
+[ LOG ] Token saved: *************************************************
+[ LOG ] Downloading your_software.jar
+[ LOG ] Completed!
+```
+
+## Starting the server
+
+Once everything is configured (server name, software, Minecraft version, tunnel provider, and authentication token), it’s time to **start the server**.
+
+Go to the cell: **🛑 Console > Run your server** and execute it. <img src="/assets/images/celdas/console.png" alt="Console" />  
+MineColab will start the server boot process, and you will see console logs confirming it is running.
+
+### Create and activate the tunnel in LocaltoNet
+
+Once the console has started, the necessary LocaltoNet dependencies will be downloaded automatically.  
+When this process finishes, you will see a message like this:
+
+```log
+[ LOG ] LocaltoNet tunnel started!  
+Start the UDP_TCP connection on the dashboard: https://localtonet.com/tunnel/tcpudp
+```
+
+At that link (<a href="https://localtonet.com/tunnel/tcpudp" target="_blank">[https://localtonet.com/tunnel/tcpudp](https://localtonet.com/tunnel/tcpudp)</a>) you can configure your tunnel.
+
+#### Steps to create the tunnel
+
+1. Click **Create TCP - UDP Tunnel**.  
+2. Select the type of tunnel according to your server:
+
+   * **TCP** → for **Java Edition** servers.  
+   * **UDP** → for **Bedrock Edition** servers.  
+3. In **Auth Token**, select the token you created earlier.  
+4. Choose the **region** you prefer (recommended is one near your location).  
+5. In **Port**, enter your Minecraft server port:
+
+   * **25565** → for **Java Edition**.  
+   * **19132** → for **Bedrock Edition**.  
+6. Other settings are optional.  
+7. Click **Create** and wait a few seconds for your tunnel to appear.  
+8. In the **URL** column, your server address will be displayed, but:
+
+   * Initially, it will not be active.  
+   * You will not see the **port** assigned until the tunnel is turned on.  
+9. To activate it, go to the **Action** column and press the **Play** button ▶️.
+
+   * Once turned on, the **URL** column will show the **full IP with port** (example: `2.tcp.localtonet.com:19132`).  
+   * This is the information you need to connect from Minecraft.
+
+### Server online
+
+Once your server is fully turned on, you will see something like this in the console:
+
+```log
+[ LOG ] Starting:
+.
+.
+.
+[00:00:00 INFO]: Done (xx.xxxs)! For help, type "help"
+```
+
+At this point, your server is already online.  
+Use the **connection address** shown in the **URL** column of LocaltoNet (including IP and port) to connect from Minecraft.
+
+With this, you have finished setting up your server with **LocaltoNet** in MineColab.  
+You can now invite your friends and start playing.

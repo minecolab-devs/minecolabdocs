@@ -1,0 +1,109 @@
+---
+title: Ngrok Tunnel
+description: How to use Ngrok with MineColab.
+---
+
+:::caution
+To use the token with TCP tunnels, you need to add a valid credit card as part of the identity verification process.  
+Ngrok requires this step to prevent abuse and ensure secure access to TCP services.
+:::
+
+## Setting up Ngrok with MineColab
+
+When selecting Ngrok as your tunnel provider, follow these steps to configure it correctly:
+
+### Enter your authentication token
+
+When you select **Ngrok** in MineColab, you will be asked for an **authentication token**. You will see a message like this:
+
+```log
+[ LOG ] Chosen Tunnel service: Ngrok
+[ LOG ] Tunnel Settings:
+[ LOG ] Get your authtoken from https://dashboard.ngrok.com/get-started/your-authtoken
+[ WARN ] Remember to paste the whole authtoken at once!
+Authtoken:
+```
+
+### How to get your token
+
+1. Go to <a href="https://ngrok.com" target="_blank">Ngrok</a> and create an account (if you don’t have one yet).  
+2. Once logged in, go to your **Dashboard** and navigate to the **Your Authtoken** section.  
+3. Copy the token shown there.
+
+Once you have the token, paste it directly on the next line inside MineColab:
+
+```log
+Authtoken:
+```
+### Select your tunnel region
+
+After entering your token, MineColab will ask you to choose a **region** for your server:
+
+```log
+Select a region:
+• ap - Asia/Pacific (Singapore)
+• au - Australia (Sydney)
+• eu - Europe (Frankfurt - Germany)
+• in - India (Mumbai)
+• jp - Japan (Tokyo)
+• sa - America (São Paulo - Brazil)
+• us - United States (Ohio)
+```
+If everything is correct, you will see something like this:
+
+```log
+[ LOG ] Token saved: *************************************************
+[ LOG ] Downloading your_software.jar
+[ LOG ] Completed!
+```
+## Starting the server
+
+Once everything is configured (server name, software, Minecraft version, tunnel provider, and authentication token), it’s time to **start the server**.
+
+Go to the cell: **🛑 Console > Run your server** and execute it. <img src="/assets/images/celdas/console.png" alt="Console" />
+
+MineColab will start the server boot process. You will see console logs indicating that the server is running:
+
+```log
+[ LOG ] Colab Version: x.x.x
+/content/drive/MyDrive/minecraft/ngrok
+[ LOG ] [Note: Downloading essentials files takes approximately 10-15 minutes. Please wait a little, then 
+restart the console.]
+[ LOG ] Directory /content/drive/MyDrive/minecraft/logs created
+[ LOG ] Directory /content/drive/MyDrive/minecraft/ngrok/tunnel created
+OpenJDK x was installed successfully.
+[ LOG ] Running server once to generate needed files...
+[ LOG ] Initial setup complete.
+[ LOG ] Accepting Eula.
+[ LOG ] Files:
+colabconfig.txt  eula.txt  your_software.jar  tunnel
+[ LOG ] Directory /content/drive/MyDrive/minecraft/logs created
+[ LOG ] Directory /content/drive/MyDrive/minecraft/ngrok/tunnel created
+OpenJDK x was installed successfully.
+[ LOG ] Starting server (ngrok)...
+[ LOG ] Stop server => /stop
+Authtoken saved to configuration file: /root/.config/ngrok/ngrok.yml
++--------------------------------------------------------------------+
+|    Use the following IPs to access your server                    |
+|    -------------------------------------------                    |
+|    Java: Your server address is x.tcp.ngrok.io:xxxxx               |
++--------------------------------------------------------------------+
+```
+Here you will see your **server IP** to connect from Minecraft.
+
+### Server online
+
+Once your server is fully running, you will see something like this:
+
+```log
+[ LOG ] Starting:
+.
+.
+.
+[00:00:00 INFO]: Done (xx.xxxs)! For help, type "help"
+```
+Done, your server is now online.  
+Use the IP address shown in the console to connect from Minecraft.
+
+With this, you have finished setting up your server with **Ngrok** in MineColab.  
+You can now invite your friends and start playing.

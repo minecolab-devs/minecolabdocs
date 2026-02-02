@@ -1,0 +1,53 @@
+---
+title: Configuración de la propiedades del Servidor
+description: Cómo ajustar las propiedades de tu servidor Minecraft.
+---
+
+## Configuración Server Properties
+
+<img src="/assets/images/celdas/propiedades.png" alt="propiedades" />
+
+MineColab permite configurar tu servidor de Minecraft de manera sencilla y segura, asegurando que los cambios importantes no afecten tus mundos existentes.  
+
+## Modificar las Propiedades del Servidor
+
+Puedes cambiar fácilmente varios parámetros de tu servidor sin editar manualmente archivos:
+
+- **Número máximo de jugadores** → Limita cuántos jugadores pueden unirse al servidor.  
+- **Modo de juego** → Selecciona entre Supervivencia, Creativo, Aventura o Espectador.  
+- **Dificultad** → Pacífico, Fácil, Normal o Difícil.  
+- **Opciones avanzadas** → PvP, bloques de comando, vuelo, aparición de animales, monstruos, aldeanos, Nether y forzar modo de juego.  
+- **Permitir jugadores sin cuenta premium** → Habilita o deshabilita el modo “cracked”.  
+
+Para cambiar estas propiedades:
+
+1. Asegúrate de haber ejecutado al menos una vez tu servidor para que exista el archivo `server.properties`.  
+2. Abre la celda de configuración de propiedades.  
+3. Ajusta los parámetros que desees.  
+4. Guarda los cambios y reinicia tu servidor para que se apliquen.
+
+## Cambiar la Semilla del Mundo (Level Seed)
+
+Si deseas generar un mundo nuevo con una semilla específica:
+
+1. Ingresa la semilla en la opción **`LevelSeed`** en la celda de configuración.  
+2. El script automáticamente realizará un **respaldo de los mundos existentes** para evitar pérdida de datos.  
+3. Los mundos respaldados se almacenan en una carpeta con nombre que incluye la fecha y la semilla utilizada.  
+4. Después del respaldo, los mundos antiguos se eliminan y se genera un nuevo mundo con la semilla indicada.  
+
+> Esto asegura que puedes experimentar con nuevas semillas sin perder tus mundos actuales.
+
+### Respaldo Automático
+
+Cada vez que se cambia la semilla:
+
+- Se detectan todos los mundos existentes (`world`, `world_nether`, `world_the_end`).  
+- Se crean copias de seguridad con fecha y nombre de servidor para fácil recuperación.  
+- Se eliminan los mundos originales solo después de hacer el respaldo.  
+
+## Resultado Final
+
+Con este script podrás:
+
+- Ajustar todas las propiedades clave de tu servidor de manera segura.  
+- Generar mundos nuevos con la semilla que quieras sin perder tus mundos actuales.  

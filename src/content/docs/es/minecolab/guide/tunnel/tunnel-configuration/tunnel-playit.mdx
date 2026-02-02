@@ -1,0 +1,124 @@
+---
+title: Playit Tunnel
+description: Cómo usar Playit con MineColab.
+---
+
+Al seleccionar Playit como tu proveedor de túnel, sigue estos pasos para configurarlo correctamente:
+
+### Ingresa tu Secret Key de autenticación
+
+Cuando selecciones **LocaltoNet** en MineColab, se te pedirá un **Secret Key**. Verás un mensaje como este:
+
+```log
+[ LOG ] Choosen Tunnel service: PlayIt
+[ LOG ] PlayIt Tunnel Settings:
+[ LOG ] Get your Secret Key from https://playit.gg/account/agents/new-docker
+[ WARN ] Remember to paste the whole Secret Key at once!  
+Secret Key :
+```
+
+### ¿Cómo obtener tu token?
+
+1. Ve a <a href="https://playit.gg/account/agents/new-docker" target="_blank">Playit</a> y crea una cuenta (si aún no tienes una).
+2. Una vez dentro, verás algo como esto; dale clic a **Create a new docker based agent**.
+
+   <img src="/assets/images/playit/agregar-agente.png" alt="Playit Agent" />  
+3. Al agente le das un nombre.
+
+   <img src="/assets/images/playit/name-agent.png" alt="Name Agent" />  
+4. Aquí es donde aparece tu Secret Key.
+
+   <img src="/assets/images/playit/key-agent.png" alt="Key Agent" />  
+
+Una vez tengas el Secret Key, pégalo directamente en la siguiente línea dentro de MineColab:
+
+```log
+Secret Key:
+```
+
+Si todo va bien, verás algo como esto:
+
+```log
+[ LOG ] Secret Key saved in settings.
+[ LOG ] Downloading server.jar
+[ LOG ] Completed!
+```
+
+## Iniciando el servidor
+
+Cuando tengas todo configurado —nombre del servidor, software, versión de Minecraft, proveedor de túnel y token de autenticación—, es momento de **iniciar el servidor**.
+
+Ve a la celda: **🛑 Console > Run your server** y ejecútala. <img src="/assets/images/celdas/console.png" alt="Console" />
+
+MineColab iniciará el proceso de arranque del servidor. Verás registros en la consola que indican que el servidor está en funcionamiento:
+
+```log
+[ LOG ] Colab Version: 0.3.2
+/content/drive/MyDrive/minecraft/PRUEBAKEYS2
+[ LOG ] [Note: Downloading essentials files takes approximately 10-15 minutes. Please wait for a little bit, then 
+restart the console.]
+[ LOG ] Directory /content/drive/MyDrive/minecraft/logs created
+[ LOG ] Directory /content/drive/MyDrive/minecraft/PRUEBAKEYS2/tunnel created
+OpenJDK 17 was installed successfully.
+[ LOG ] Running server once to generate needed files...
+[ LOG ] Initial setup complete.
+[ LOG ] Accepting Eula.
+[ LOG ] Files:
+colabconfig.txt  eula.txt  libraries  server.jar  tunnel  versions
+[ LOG ] Directory /content/drive/MyDrive/minecraft/logs created
+[ LOG ] Directory /content/drive/MyDrive/minecraft/PRUEBAKEYS2/tunnel created
+OpenJDK 17 was installed successfully.
+[ LOG ] Starting server (playit)...
+[ LOG ] Stop server => /stop
+/usr/local/bin/playit
+[ LOG ] Logging in with existing Playit Secret Key.
+[ LOG ] Starting Playit:
+[ LOG ] Playit Connected
+```
+
+En el momento que veas este mensaje en la consola:
+
+```log
+[ LOG ] Playit Connected
+```
+
+Ya puedes crear un túnel en tu agente, tiene que aparecer así. <img src="/assets/images/playit/cone-agent.png" alt="Conect Agent" />
+
+### Iniciar la configuración del túnel
+
+Al hacer clic en el agente, te aparecerá esto: <img src="/assets/images/playit/agent-tunel.png" alt="Tunnel Agent" />
+
+Verás la opción para crear un túnel. Haz clic en **Crear túnel**.
+
+Selecciona el tipo de túnel que quieres crear, según el tipo de servidor que configuraste (Java o Bedrock).
+
+<img src="/assets/images/playit/seleccionar-tipo.png" alt="Seleccionar tipo de túnel" />  
+
+Haz clic en **Agregar túnel** para confirmar y finalizar la configuración.
+
+<img src="/assets/images/playit/agregar-tunel.png" alt="Agregar túnel" />  
+
+Después de agregar el túnel, se mostrará tu dirección IP pública, la cual será la IP con la que puedes entrar a tu servidor.
+Además, verás un enlace generado por Playit que también es válido para ingresar a tu servidor.
+
+<img src="/assets/images/playit/ip-generada.png" alt="IP generada por Playit" />  
+
+Con eso terminado, ahora vuelve a **MineColab** para comprobar si la configuración del túnel se guardó correctamente.
+
+### Servidor en línea
+
+Ahora solo queda esperar a que el servidor termine de iniciarse por completo.
+
+```log
+[ LOG ] Starting:
+.
+. 
+.
+[00:00:00 INFO]: Done (xx.xxxs)! For help, type "help"
+```
+
+Listo, tu servidor ya está **en línea**.
+Usa la dirección IP generada por Playit para conectarte desde Minecraft.
+
+Con esto, has terminado de configurar tu servidor con **Playit** en **MineColab**.
+Ya puedes invitar a tus amigos y comenzar a jugar.

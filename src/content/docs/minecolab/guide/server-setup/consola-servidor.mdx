@@ -1,0 +1,75 @@
+---
+title: Server Console
+description: General usage of the console in MineColab, including startup, commands, and logs.
+---
+## ▶ or 🛑 Server Console
+
+<img src="/assets/images/celdas/console.png" alt="Console" />
+
+The console is the main tool to interact with your server in MineColab. From here, you can start the server, view real-time logs, and run administrative commands. Tunnel configurations and how to start the server from the console were explained in the **Tunnels** section.
+
+### Pre-Startup Options
+
+Before running the **Console > Run your server** cell, you will see the following options:
+
+**Custom arguments (custom\_args)**
+
+* If checked: you can write your own Java parameters (e.g., `-Xms2G -Xmx4G -XX:+UseG1GC`).
+* If unchecked: MineColab will automatically apply the recommended default parameters.
+
+**Auto update (Bedrock only)**
+
+* If checked: the Bedrock server will automatically update when a new version is available.
+  * This process may take 10–15 minutes.
+  * The server will not be available during this time.
+* If unchecked: the server will not auto-update.
+  * You will decide when and how to apply updates manually.
+  * This option does not affect Java servers.
+
+### Server Startup
+
+Once options are configured, run the **Console > Run your server** cell.  
+MineColab will start the server and display the startup logs, including:
+
+* Installation of required dependencies.
+* Generation of initial files (EULA, world folders, configuration).
+* Loading of plugins or mods (if installed).
+* Confirmation that the server is online with the message:
+
+```log
+[00:00:00 INFO]: Done (xx.xxxs)! For help, type "help"
+```
+
+### Using Commands in the Console
+
+You can type commands directly in the console while the server is running. Examples:
+
+* `/stop` → Safely stops the server.
+* `/op <player>` → Grants operator permissions to a player.
+* `/whitelist add <player>` → Adds a player to the whitelist.
+* `/say <message>` → Sends a global message to all connected players.
+
+For a full list of Minecraft commands, refer to the official command documentation.
+
+### Reading Logs
+
+The console also shows real-time logs, which help you:
+
+* Monitor player connections and disconnections.
+* Identify server errors or warnings.
+* Confirm plugins or mods loaded successfully.
+
+### Customizing Java Parameters
+
+If **Custom arguments** is enabled, you can adjust server performance using parameters like:
+
+* `-Xms` → Minimum allocated memory (e.g., `-Xms2G`).
+* `-Xmx` → Maximum allocated memory (e.g., `-Xmx4G`).
+* `-XX:+UseG1GC` → Enables G1GC garbage collector for better performance with many players.
+
+For more information on Java parameters, visit:
+
+* <a href="https://docs.papermc.io/paper/aikars-flags/" target="_blank">**Aikar's flags - Paper**</a>
+* <a href="https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/" target="_blank">**Aikar's flags guide**</a>
+* <a href="https://flags.sh/" target="_blank">**flags.sh**</a>
+* <a href="https://github.com/MeowIce/meowice-flags?tab=readme-ov-file" target="_blank">**MeowIce's Flags**</a>

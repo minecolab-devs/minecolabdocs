@@ -1,0 +1,44 @@
+{
+  "name": "docs",
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^6.3.6",
+    "@astrojs/starlight": "^0.35.2",
+    "@astrojs/vercel": "^8.2.7",
+    "@fontsource/jetbrains-mono": "^5.2.6",
+    "@fontsource/poppins": "^5.2.6",
+    "astro": "^5.13.5",
+    "astro-d2": "^0.7.0",
+    "sharp": "^0.34.3",
+    "starlight-contributor-list": "^0.3.0",
+    "starlight-links-validator": "^0.16.0",
+    "starlight-sidebar-topics": "^0.6.0",
+    "starlight-sidebar-topics-dropdown": "^0.5.1",
+    "typescript": "^5.8.3",
+    "unist-util-visit": "^5.0.0",
+    "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/mdast": "^4.0.4",
+    "@types/node": "^22.16.5",
+    "dead-or-alive": "^1.0.4",
+    "depcheck": "^1.4.7",
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-organize-imports": "^4.2.0"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "packageManager": "pnpm@10.8.0+sha512.0e82714d1b5b43c74610193cb20734897c1d00de89d0e18420aebc5977fa13d780a9cb05734624e81ebd81cc876cd464794850641c48b9544326b5622ca29971"
+}

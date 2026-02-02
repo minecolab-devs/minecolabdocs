@@ -1,0 +1,34 @@
+---
+title: Cambio del Token del Túnel
+description: Cómo modificar o agregar el token de tu servicio de túnel en MineColab.
+---
+
+## Cómo Cambiar o Agregar un Token
+
+<img src="/assets/images/celdas/token_change.png" alt="token_change" />
+
+1. Asegúrate de haber ejecutado al menos una vez tu servidor para inicializar la configuración.  
+2. Abre la celda **Change Tunnel Token**.  
+3. Selecciona el servicio de túnel en **`tunnel_service`**.  
+4. Ingresa tu token en el campo que se solicita.  
+   - Si no entiendes cómo se configura un token, visita la documentación específica de cada tunnel:
+      - [Ngrok](/minecolab/guide/tunnel/tunnel-configuration/tunnel-ngrok)  
+      - [Zrok](/minecolab/guide/tunnel/tunnel-configuration/tunnel-zrok)  
+      - [PlayIt.gg](/minecolab/guide/tunnel/tunnel-configuration/tunnel-playit)  
+      - [LocalToNet](/minecolab/guide/tunnel/tunnel-configuration/tunnel-localtonet)  
+      - [Tailscale](/minecolab/guide/tunnel/tunnel-configuration/tunnel-tailscale)  
+      - [Minekube Gate](/minecolab/guide/tunnel/tunnel-configuration/tunnel-minekube-gate)
+      
+  
+5. Si no ingresas un token, el script mostrará un error y no guardará cambios.  
+6. Una vez ingresado, el token se guarda automáticamente en la configuración de MineColab.
+
+## Finalización
+
+¡Listo! El token del túnel se ha actualizado correctamente.  
+
+- Verifica que el túnel seleccionado esté activo usando la celda **Change Tunnel Service**.  
+- Si algo no funciona, vuelve a ingresar el token y guarda los cambios.  
+- Si no entiendes cómo se configura un token, visita la documentación específica de cada servicio.  
+
+El servidor está listo para usar el túnel de manera autenticada.

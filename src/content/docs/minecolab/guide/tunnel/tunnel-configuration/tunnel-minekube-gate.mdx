@@ -1,0 +1,144 @@
+---
+title: Minekube Gate Tunnel
+description: How to use Minekube Gate with MineColab.
+---
+
+## Configure Minekube Gate with MineColab
+
+When selecting **Minekube Gate** as your tunnel provider, follow these steps to configure it correctly:
+
+## Enter your authentication token
+
+When you select **Minekube Gate** in MineColab, you will be asked for an **authentication token**.  
+You will see a message like this:
+
+```log
+[ LOG ] Chosen Tunnel service: Minekube-Gate
+[ LOG ] Tunnel Settings:
+[ LOG ] Get your authtoken from https://app.minekube.com/orgs
+[ WARN ] Remember to paste the whole authtoken at once!
+Authtoken:
+````
+
+## How to get your token
+
+1. Go to <a href="https://app.minekube.com" target="_blank">Minekube</a> and create an account (if you don’t have one yet).  
+2. Click **Create or add Endpoint**.  
+   - You can use the default name or assign a new one (for example: `mine-colab`).  
+   - **Remember this name**, as it will be used later.  
+3. Inside the **Endpoint** you created, go to the **Connectors** section and click the **Reset Token** button.  
+4. The token will appear on screen; copy it to use in MineColab.
+
+If everything is correct, you will see something like this in the console:
+
+```log
+[ LOG ] Token saved: *************************************************
+[ LOG ] Downloading your_software.jar
+[ LOG ] Completed!
+```
+
+## Starting the server
+
+Once you have configured everything (server name, software, Minecraft version, tunnel, and token), it’s time to **start the server**.
+
+Go to the cell: **🛑 Console > Run your server** and execute it. <img src="/assets/images/celdas/console.png" alt="Console" />  
+MineColab will start the server boot process and display logs in the console.
+
+---
+
+### Waiting for tunnel activation
+
+When booting is complete, you will see something like this:
+
+```log
+[ LOG ] Starting Gate
+[ LOG ] Logging in with minekube token.
+[ LOG ] Minekube gate connected successfully
++-------------------------------------------------------+
+|     Use the following ip to access your shares        |
+|     ------------------------------------------        |
+|     xxxx-xxxx-XXX.play.minekube.net                   |
++-------------------------------------------------------+
+[ LOG ] Playit startup
+[ LOG ] No token in settings. Running playit setup
+[ PLAYIT ] Visit link to setup https://playit.gg/claim/bxcxxxebbx
+[ LOG ] Setup complete. Moving key to settings file
+[ LOG ] Done.
+[ LOG ] Starting Playit:
+[ LOG ] Playit Connected
+```
+:::caution
+The Minekube link shown is not directly functional yet.  
+MineColab also activates Playit as a backup tunnel so the server remains accessible even if Minekube goes down.
+:::
+
+After this, wait for the server to finish booting:
+
+```log
+[ LOG ] Starting:
+.
+.
+.
+[00:00:00 INFO]: Done (xx.xxxs)! For help, type "help"
+```
+Once the **Done** message appears, the server has completed the initial boot.  
+At this point, **you must stop the server** before continuing with final tunnel configuration or making any additional adjustments.
+
+### Final tunnel configuration
+
+Now go to **🌐 Tunneling options**.  
+There you will find the cell **Minekube Tunnel Config**.
+
+<img src="/assets/images/celdas/cel_minekube.png" alt="cel_minekube" />
+
+1. Run the cell.  
+2. You will be asked to enter the **Endpoint name** you previously created in Minekube.  
+3. Enter the name correctly and confirm.  
+
+If everything is correct, you will see something like this in the console:
+
+```log
+Enter the name/endpoint you want to use for Minekube: mine-colab
+[ LOG ] [MINEKUBE] Configuration updated with value 'mine-colab' at: /content/drive/MyDrive/minecraft/myserver/tunnel/minekube-gate/config.yml
+```
+
+Go back to the cell: **🛑 Console > Run your server** and execute it.
+
+---
+
+### Server online
+
+Once the tunnel configuration is complete and the Minekube cell is executed, your server will be **fully online**.
+
+Here you will see your **server IP** to connect from Minecraft. This is the valid IP:
+
+```log
+[ LOG ] Starting Gate
+[ LOG ] Logging in with minekube token.
+[ LOG ] Minekube gate connected successfully
++-------------------------------------------------------+
+|     Use the following ip to access your shares        |
+|     ------------------------------------------        |
+|     name-endpoint.play.minekube.net                   | 
++-------------------------------------------------------+
+[ LOG ] Playit startup
+[ LOG ] Done.
+[ LOG ] Starting Playit:
+[ LOG ] Playit Connected
+```
+
+Once your server is fully started, you will see:
+
+```log
+[ LOG ] Starting:
+.
+.
+.
+[00:00:00 INFO]: Done (xx.xxxs)! For help, type "help"
+```
+
+Your server is now **online**.  
+Use the IP address shown in the console to connect from Minecraft.
+
+With this, you have finished setting up your server with **Minekube Gate** in MineColab.  
+You can now invite your friends and start playing.

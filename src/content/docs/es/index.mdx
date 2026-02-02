@@ -1,0 +1,20 @@
+---
+title: Bienvenido
+description: Documentación de MineColab Improved, incluyendo la configuración del servidor y la integración con Google Colab.
+template: splash
+hero:
+  title: Documentación de MineColab Improved
+  tagline: MineColab Improved es un proyecto activo que te permite crear un servidor de Minecraft. Está diseñado para ser fácil de usar.
+  image:
+    html: '<img src="/assets/brand/minecolab_logo.svg" alt="Logo de MineColab">'
+---
+
+import { CardGrid } from "@astrojs/starlight/components";
+import { ContributorList } from "starlight-contributor-list";
+import LinkCard from "/src/components/LinkCard.astro";
+
+<CardGrid>
+  <LinkCard title="MineColab Improved" href="/minecolab" icon="star">
+    MineColab Improved es un proyecto activo que te permite crear un servidor de Minecraft. Está diseñado para ser fácil de usar.
+  </LinkCard>
+</CardGrid>

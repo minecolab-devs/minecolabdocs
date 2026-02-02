@@ -1,0 +1,49 @@
+---
+title: Configuración del Túnel Minekube
+description: Cómo actualizar el nombre o endpoint del túnel Minekube en MineColab.
+---
+
+## Configuración del Túnel Minekube
+
+<img src="/assets/images/celdas/cel_minekube.png" alt="cel_minekube" />
+
+MineColab permite exponer tu servidor de Minecraft mediante **Minekube-Gate**, que requiere una configuración específica en `config.yml`.  
+Con esta celda puedes **actualizar el nombre o endpoint** del túnel Minekube de manera sencilla y segura.
+
+:::caution
+El túnel activo debe ser **Minekube-Gate**.  
+:::
+
+## Cómo Actualizar el Nombre/Endpoint
+
+1. Abre la celda **Minekube Tunnel Config**.  
+2. Si el túnel activo es **Minekube-Gate**, se te pedirá ingresar un **nombre o endpoint** para tu túnel.  
+3. Ingresa el valor deseado y presiona Enter.  
+   - Este valor se usará tanto como nombre como endpoint en `config.yml`.  
+4. El script actualiza automáticamente la sección `connect` del archivo YAML:  
+
+    ```yaml
+    connect:
+      enabled: true
+      name: <valor_ingresado>
+      endpoint: <valor_ingresado>
+    ````
+
+5. Verás un mensaje de confirmación indicando que la configuración se actualizó correctamente.
+
+:::note
+Si el túnel activo no es **Minekube-Gate**, el script no hará cambios y mostrará un mensaje informativo.
+Esta configuración garantiza que tu servidor de Minecraft pueda conectarse correctamente mediante Minekube-Gate con el nombre/endpoint deseado.
+:::
+
+## Finalización
+
+¡Listo! El nombre y endpoint del túnel Minekube se han actualizado correctamente.
+
+  * Para activar el túnel de Minekube, **es necesario ejecutar esta celda**.
+
+  * Si no sabes cómo encontrar tu endpoint o configurarlo, puedes visitar la documentación de [Tunnel Minekube](/minecolab/guide/tunnel/tunnel-configuration/tunnel-minekube-gate).
+
+  * Tu servidor estará accesible mediante Minekube-Gate usando la nueva configuración.
+
+  * Todo se realiza de manera segura sin afectar otros túneles ni configuraciones del servidor.

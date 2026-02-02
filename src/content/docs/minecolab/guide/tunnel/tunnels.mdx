@@ -1,0 +1,90 @@
+---
+title: Tunnels
+description: Tunnels compatible with MineColab.
+---
+import { CardGrid, LinkCard } from "@astrojs/starlight/components";
+
+## Tunnels
+
+There are several tunnel services that allow you to expose your Minecraft server online without the need to manually open ports.  
+Each one has its own features, limitations, and benefits.
+
+## Available Tunnels
+
+- **Ngrok**
+- **PlayIt.gg**
+- **Zrok**
+- **LocalToNet**
+- **Tailscale**
+- **Minekube Gate**
+
+---
+
+## Common Limitations
+
+Each tunnel provider has restrictions you should consider before choosing.
+
+- **Ngrok**  
+  The domain changes every time you restart (unless you use a paid plan).  
+  Has limits on simultaneous connections and bandwidth.  
+  Requires a credit card to use your token.
+
+- **PlayIt.gg**  
+  Assigns a public IP that usually remains the same as long as the configuration is preserved.  
+  Some regions may experience moderate latency.
+
+- **Zrok**  
+  May require additional configuration.  
+  Not fully optimized for real-time gaming.  
+  Some regions may experience moderate latency.
+
+- **LocalToNet**  
+  The free plan has session limits.  
+  Some regions may experience moderate latency.
+
+- **Tailscale**  
+  Requires client installation and authentication.  
+  Works best in private network environments.  
+  Some regions may experience moderate latency.
+
+- **Minekube Gate**  
+  Still in development.  
+  May not be stable in all environments.  
+  Some regions may experience moderate latency.
+
+---
+
+## Tunnel Guides
+
+<CardGrid>
+  <LinkCard
+    title="Ngrok"
+    description="How to use Ngrok with MineColab."
+    href="/minecolab/guide/tunnel/tunnel-configuration/tunnel-ngrok"
+  />
+  <LinkCard
+    title="PlayIt.gg"
+    description="How to use PlayIt.gg with MineColab."
+    href="/minecolab/guide/tunnel/tunnel-configuration/tunnel-playit"
+  />
+  <LinkCard
+    title="Zrok"
+    description="How to use Zrok with MineColab."
+    href="/minecolab/guide/tunnel/tunnel-configuration/tunnel-zrok"
+  />
+  <LinkCard
+    title="LocalToNet"
+    description="How to use LocalToNet with MineColab."
+    href="/minecolab/guide/tunnel/tunnel-configuration/tunnel-localtonet"
+  />
+  <LinkCard
+    title="Tailscale"
+    description="How to use Tailscale with MineColab."
+    href="/minecolab/guide/tunnel/tunnel-configuration/tunnel-tailscale"
+  />
+  <LinkCard
+    title="Minekube Gate"
+    description="How to use Minekube Gate with MineColab."
+    href="/minecolab/guide/tunnel/tunnel-configuration/tunnel-minekube-gate"
+  />
+</CardGrid>

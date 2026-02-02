@@ -1,0 +1,36 @@
+---
+title: Changing Tunnels
+description: How to change your tunnel in MineColab for your Minecraft server.
+---
+
+## How to Change the Tunnel Service
+
+<img src="/assets/images/celdas/tunnels_change.png" alt="tunnels_change" />
+
+1. Make sure you have run your server at least once to initialize the configuration.  
+2. Open the cell **Change Tunnel Service**.  
+3. Select the tunnel service you want to use in **`tunnel_service`**:  
+   - `"Leave as it is"` → Keeps the current tunnel.  
+   - `"ngrok"`, `"argo"`, `"zrok"`, `"playit"`, `"localtonet"`, `"tailscale"`, `"minekube-gate"`  
+4. Save the changes; the script will automatically update the tunnel configuration.  
+5. Restart the server if necessary to activate the new tunnel.  
+
+## Access the specific configuration for each tunnel
+
+If you don’t know how to configure each tunnel, check the specific documentation:  
+
+- [Ngrok](/minecolab/guide/tunnel/tunnel-configuration/tunnel-ngrok)  
+- [Zrok](/minecolab/guide/tunnel/tunnel-configuration/tunnel-zrok)  
+- [PlayIt.gg](/minecolab/guide/tunnel/tunnel-configuration/tunnel-playit)  
+- [LocalToNet](/minecolab/guide/tunnel/tunnel-configuration/tunnel-localtonet)  
+- [Tailscale](/minecolab/guide/tunnel/tunnel-configuration/tunnel-tailscale)  
+- [Minekube Gate](/minecolab/guide/tunnel/tunnel-configuration/tunnel-minekube-gate)
+
+## Completion
+
+Done! Your Minecraft server is now using the new tunnel.  
+
+- Check that the tunnel is active before sharing your server.  
+- If something doesn’t work, go back to the **Change Tunnel Service** cell and select another tunnel.  
+
+Your server is ready to play and share.

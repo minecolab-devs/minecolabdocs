@@ -1,0 +1,35 @@
+---
+import Default from "@astrojs/starlight/components/Footer.astro";
+import { Icon } from "@astrojs/starlight/components";
+---
+
+<Default><slot /></Default>
+<div>
+  <p class="footer-item">
+    Copyright © {new Date().getFullYear()} MineColab Improved.
+  </p>
+  <p class="footer-item muted">
+    This site is unofficial and not affiliated with Mojang or Microsoft. All names are trademarks of their owners.
+  </p>
+</div>
+
+<style>
+  .footer-item {
+    text-align: center;
+    font-size: var(--sl-text-2xs);
+    color: var(--sl-color-gray-2);
+    margin-bottom: 0.25rem;
+  }
+
+  .footer-item a:not(:hover) {
+    text-decoration: none;
+  }
+
+  .icon {
+    color: var(--sl-color-orange);
+  }
+
+  .muted {
+    color: var(--sl-color-gray-3);
+  }
+</style>

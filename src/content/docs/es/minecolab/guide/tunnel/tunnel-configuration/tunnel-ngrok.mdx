@@ -1,0 +1,114 @@
+---  
+title: Ngrok Tunnel  
+description: Cómo usar Ngrok con MineColab.  
+---  
+
+:::caution  
+Para usar el token con túneles TCP, necesitas añadir una tarjeta de crédito válida como parte del proceso de verificación de identidad.  
+Ngrok requiere este paso para prevenir abusos y garantizar un acceso seguro a los servicios TCP.  
+:::  
+
+## Configurar Ngrok con MineColab  
+
+Al seleccionar Ngrok como tu proveedor de túnel, sigue estos pasos para configurarlo correctamente:  
+
+### Ingresa tu token de autenticación  
+
+Cuando selecciones **Ngrok** en MineColab, se te pedirá un **token de autenticación**. Verás un mensaje como este:  
+
+```log
+[ LOG ] Choosen Tunnel service: Ngrok  
+[ LOG ] Tunnel Settings:  
+[ LOG ] Get your authtoken from https://dashboard.ngrok.com/get-started/your-authtoken  
+[ WARN ] Remember to paste the whole authtoken at once!  
+Authtoken:
+````
+
+### ¿Cómo obtener tu token?
+
+1. Ve a <a href="https://ngrok.com" target="_blank">Ngrok</a> y crea una cuenta (si aún no tienes una).
+2. Una vez dentro, accede a tu **Panel de control** y dirígete a la sección **Your Authtoken**.
+3. Copia el token que aparece ahí.
+
+Una vez tengas el token, pégalo directamente en la siguiente línea dentro de MineColab:
+
+```log
+Authtoken:
+```
+
+### Selecciona la región de tu túnel
+
+Después de ingresar tu token, MineColab te pedirá que elijas una **región** para tu servidor:
+
+```log
+Select a region:
+• ap - Asia/Pacific (Singapore)
+• au - Australia (Sydney)
+• eu - Europe (Frankfurt - Germany)
+• in - India (Mumbai)
+• jp - Japan (Tokyo)
+• sa - America (São Paulo - Brazil)
+• us - United States (Ohio)
+```
+
+Si todo va bien, verás algo como esto:
+
+```log
+[ LOG ] Token saved: *************************************************
+[ LOG ] Downloading yor_sotfware.jar
+[ LOG ] Completed!
+```
+
+## Iniciando el servidor
+
+Cuando tengas todo configurado (nombre del servidor, software, versión de Minecraft, proveedor de túnel y token de autenticación), es momento de **iniciar el servidor**.
+
+Ve a la celda: **🛑 Console > Run your server** y ejecútala. <img src="/assets/images/celdas/console.png" alt="Console" />
+
+MineColab iniciará el proceso de arranque del servidor. Verás registros en la consola que indican que el servidor está en funcionamiento:
+
+```log
+[ LOG ] Colab Version: x.x.x
+/content/drive/MyDrive/minecraft/ngrock
+[ LOG ] [Note: Downloading essentials files takes approximately 10-15 minutes. Please wait for a little bit, then 
+restart the console.]
+[ LOG ] Directory /content/drive/MyDrive/minecraft/logs created
+[ LOG ] Directory /content/drive/MyDrive/minecraft/ngrock/tunnel created
+OpenJDK x was installed successfully.
+[ LOG ] Running server once to generate needed files...
+[ LOG ] Initial setup complete.
+[ LOG ] Accepting Eula.
+[ LOG ] Files:
+colabconfig.txt  eula.txt  yor_sotfware.jar  tunnel
+[ LOG ] Directory /content/drive/MyDrive/minecraft/logs created
+[ LOG ] Directory /content/drive/MyDrive/minecraft/ngrock/tunnel created
+OpenJDK x was installed successfully.
+[ LOG ] Starting server (ngrok)...
+[ LOG ] Stop server => /stop
+Authtoken saved to configuration file: /root/.config/ngrok/ngrok.yml
++--------------------------------------------------------------------+
+|    Use the following ips to access your server                     |
+|    -------------------------------------------                     |
+|    Java: Your server address is x.tcp.ngrok.io:xxxxx               |
++--------------------------------------------------------------------+
+```
+
+Aquí verás la **IP de tu servidor** para conectarte desde Minecraft.
+
+### Servidor en línea
+
+Una vez que tu servidor esté completamente prendido, verás algo como esto:
+
+```log
+[ LOG ] Starting:
+.
+.
+.
+[00:00:00 INFO]: Done (xx.xxxs)! For help, type "help"
+```
+
+Listo, tu servidor ya está en línea.
+Usa la dirección IP que aparece en la consola para conectarte desde Minecraft.
+
+Con eso, has terminado de configurar tu servidor con **Ngrok** en MineColab.
+Ya puedes invitar a tus amigos y comenzar a jugar.
