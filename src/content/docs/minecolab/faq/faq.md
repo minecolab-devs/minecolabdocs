@@ -94,7 +94,9 @@ It is not a MineColab problem but an **external network or connectivity issue**,
 This error **does not come from MineColab**, but from external factors.  
 MineColab only provides the execution environment; connection stability depends on your network, tunnel, and local configuration.
 :::
-
+:::note
+Issue GetSockOpt refers to your Internet Service Provider blocking your connection to playit. For bypasses read the [#FAQ](https://discord.com/channels/1214801871827501097/1460712763222659164/1460748422020599829)
+:::
 ## I get errors in mods or plugins, how do I fix them?
 
 If the error comes from a mod or plugin, MineColab does not provide direct support for those cases unless it is confirmed that the issue was caused by interference from the MineColab environment itself.

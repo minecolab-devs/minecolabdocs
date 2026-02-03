@@ -95,7 +95,9 @@ No es un problema de MineColab, sino de **red o conectividad externa**, ya sea p
 Este error **no proviene de MineColab**, sino de factores externos.
 MineColab solo proporciona el entorno de ejecución —la estabilidad de la conexión depende de tu red, túnel y configuración local.
 :::
-
+:::note
+El **error GetSockOpt** se refiere a que tu proveedor de servicios de Internet está bloqueando tu conexión a PlayIt. Para soluciones, lee el [FAQ](https://discord.com/channels/1214801871827501097/1460712763222659164/1460748422020599829).
+:::
 ## Me sale un error en los mods o plugins, ¿cómo lo soluciono?
 
 Si el error proviene de un mod o plugin, MineColab no brinda soporte directo a esos casos, salvo que se confirme que el problema fue causado por una interferencia del propio entorno de MineColab.
